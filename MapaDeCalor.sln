@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapaDeCalor", "MapaDeCalor\MapaDeCalor.csproj", "{EA572191-8ED9-4701-8224-F84367D83ADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA572191-8ED9-4701-8224-F84367D83ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA572191-8ED9-4701-8224-F84367D83ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA572191-8ED9-4701-8224-F84367D83ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA572191-8ED9-4701-8224-F84367D83ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ED161D3-2D8C-4834-9F84-376DBA05FF9C}
+	EndGlobalSection
+EndGlobal
