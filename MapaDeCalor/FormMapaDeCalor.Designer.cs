@@ -81,11 +81,9 @@ namespace MapaDeCalor
             this.label22 = new System.Windows.Forms.Label();
             this.cbxY = new System.Windows.Forms.ComboBox();
             this.btnCalcular = new System.Windows.Forms.Button();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pbxIndicador = new System.Windows.Forms.PictureBox();
+            this.elipseIndicador = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.indicador = new System.Windows.Forms.PictureBox();
             this.pnlExterno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxIndicador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indicador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -557,7 +555,7 @@ namespace MapaDeCalor
             "3",
             "4",
             "5"});
-            this.cbxX.Location = new System.Drawing.Point(218, 504);
+            this.cbxX.Location = new System.Drawing.Point(345, 502);
             this.cbxX.Name = "cbxX";
             this.cbxX.Size = new System.Drawing.Size(76, 21);
             this.cbxX.TabIndex = 2;
@@ -567,7 +565,7 @@ namespace MapaDeCalor
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(190, 504);
+            this.label21.Location = new System.Drawing.Point(317, 502);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(22, 28);
             this.label21.TabIndex = 1;
@@ -577,7 +575,7 @@ namespace MapaDeCalor
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(190, 529);
+            this.label22.Location = new System.Drawing.Point(445, 502);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(21, 28);
             this.label22.TabIndex = 1;
@@ -592,7 +590,7 @@ namespace MapaDeCalor
             "3",
             "4",
             "5"});
-            this.cbxY.Location = new System.Drawing.Point(218, 531);
+            this.cbxY.Location = new System.Drawing.Point(473, 504);
             this.cbxY.Name = "cbxY";
             this.cbxY.Size = new System.Drawing.Size(76, 21);
             this.cbxY.TabIndex = 2;
@@ -605,38 +603,29 @@ namespace MapaDeCalor
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.ForeColor = System.Drawing.Color.White;
-            this.btnCalcular.Location = new System.Drawing.Point(515, 498);
+            this.btnCalcular.Location = new System.Drawing.Point(578, 503);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(138, 27);
+            this.btnCalcular.Size = new System.Drawing.Size(100, 21);
             this.btnCalcular.TabIndex = 3;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
             // 
-            // bunifuElipse1
+            // elipseIndicador
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // pbxIndicador
-            // 
-            this.pbxIndicador.BackColor = System.Drawing.Color.Transparent;
-            this.pbxIndicador.Image = global::MapaDeCalor.Properties.Resources.square;
-            this.pbxIndicador.Location = new System.Drawing.Point(150, 429);
-            this.pbxIndicador.Name = "pbxIndicador";
-            this.pbxIndicador.Size = new System.Drawing.Size(35, 35);
-            this.pbxIndicador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxIndicador.TabIndex = 4;
-            this.pbxIndicador.TabStop = false;
+            this.elipseIndicador.ElipseRadius = 4;
+            this.elipseIndicador.TargetControl = this.indicador;
             // 
             // indicador
             // 
+            this.indicador.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.indicador.Image = global::MapaDeCalor.Properties.Resources.square;
-            this.indicador.Location = new System.Drawing.Point(83, 492);
+            this.indicador.Location = new System.Drawing.Point(150, 429);
             this.indicador.Name = "indicador";
             this.indicador.Size = new System.Drawing.Size(35, 35);
             this.indicador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.indicador.TabIndex = 5;
             this.indicador.TabStop = false;
+            this.indicador.Visible = false;
             // 
             // FormMapaDeCalor
             // 
@@ -645,7 +634,6 @@ namespace MapaDeCalor
             this.ClientSize = new System.Drawing.Size(800, 577);
             this.Controls.Add(this.indicador);
             this.Controls.Add(this.pnlExterno);
-            this.Controls.Add(this.pbxIndicador);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.cbxY);
             this.Controls.Add(this.cbxX);
@@ -674,7 +662,6 @@ namespace MapaDeCalor
             this.Name = "FormMapaDeCalor";
             this.Text = "Form1";
             this.pnlExterno.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxIndicador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.indicador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -733,8 +720,7 @@ namespace MapaDeCalor
         public System.Windows.Forms.Button btnCalcular;
         public System.Windows.Forms.Panel pnlReferencia;
         public System.Windows.Forms.Panel pnlExterno;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        public System.Windows.Forms.PictureBox pbxIndicador;
+        private Bunifu.Framework.UI.BunifuElipse elipseIndicador;
         public System.Windows.Forms.PictureBox indicador;
     }
 }

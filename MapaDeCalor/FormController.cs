@@ -26,8 +26,8 @@ namespace MapaDeCalor
             int anchoCuadro = this.formMapaDeCalor.pnlReferencia.Width;
             int altoCuadro = this.formMapaDeCalor.pnlReferencia.Height;
 
-            int anchoIndicador = this.formMapaDeCalor.pbxIndicador.Width;
-            int altoIndicador = this.formMapaDeCalor.pbxIndicador.Height;
+            int anchoIndicador = this.formMapaDeCalor.indicador.Width;
+            int altoIndicador = this.formMapaDeCalor.indicador.Height;
 
             this.formMapaDeCalor.indicador.Location = new System.Drawing.Point((Convert.ToInt32(this.formMapaDeCalor.cbxX.SelectedItem) - 1) * (anchoCuadro) + CoordX + anchoCuadro/2 - anchoIndicador/2 , (Convert.ToInt32(this.formMapaDeCalor.cbxY.SelectedItem)-1) * (-altoCuadro) + CoordY - altoCuadro / 2 - altoIndicador / 2);
             //this.formMapaDeCalor.pbxIndicador.BringToFront();
